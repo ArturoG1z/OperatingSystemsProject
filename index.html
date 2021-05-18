@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link rel="stylesheet" href="css/style.css">
+    <title>OS Project</title>
+</head>
+
+<body>
+    <!-- <h1>Marcadores</h1> -->
+    <section id="start-section">
+        <div class="instructions">
+            <p>Remember that the program works with two configuration files, one for configuring memory called 'memory.conf' and the other for commands called 'commands.conf'</p>
+            <p>If the number of virtual pages is not entered, 64 is assumed</p>
+            <p>If the number of page frames is not entered, 32 is assumed</p>
+            <p>If the page size is not entered, 4096 is assumed</p>
+            <p>If for some reason time is put in memory (inMemTime) or time of last reference (lastTouchTime) in virtual pages without mapping these values will be set to -1</p>
+            <p>To reload data from the configuration files press the exit button in the simulation and load from this load button</p>
+        </div>
+        <button class="button load-button" id="load-simulation">Load simulation</button>
+        <section class="messages">
+            <p id="error-msg"></p>
+            <p id="success-msg"></p>
+        </section>
+    </section>
+
+    <section id="simulation">
+        <div class="button-menu">
+            <button class="button" id="run">run</button>
+            <button class="button" id="step-by-step">Step by Step</button>
+            <button class="button" id="reset">Reset</button>
+            <button class="button" id="salir">Exit</button>
+        </div>
+        <div class="contenct">
+            <div class="tables">
+                <div class="responsive-container v-mem" id="virual-memory">
+                </div>
+                <div class="responsive-container f-mem" id="physical-memory">
+                </div>
+            </div>
+            <div class="lateral-labels">
+                <p class="label-info">Status:<span id="status"></span></p>
+                <p class="label-info">LRU page<br>(physical, virtual):<span id="LRUpage"></span></p>
+                <p class="label-info">MRU page<br>(physical, virtual):<span id="MRUpage"></span></p>
+                <p class="label-info">Time(ms):<span id="current-time"></span></p>
+                <p class="label-info">Instruction:<span id="instruction"></span></p>
+                <p class="label-info">Page Fault:<span id="page-fail"></span></p>
+                <p class="label-info">Address:<span id="direction"></span></p>
+                <p class="label-info">Virtual page:<span id="virtual-page"></span></p>
+                <p class="label-info">Physical page:<span id="physical-page"></span></p>
+                <p class="label-info">R-bit:<span id="R-bit"></span></p>
+                <p class="label-info">M-bit:<span id="M-bit"></span></p>
+                <p class="label-info">Mem. Time(ms):<span id="memoryTime"></span></p>
+                <p class="label-info">Last Update(ms):<span id="lastUpdate"></span></p>
+                <p class="label-info">Low:<span id="low"></span></p>
+                <p class="label-info">High:<span id="high"></span></p>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Made by: Felipe Arturo Gonzalez Lopez</p>
+    </footer>
+
+    <script src="renderer.js"></script>
+</body>
+
+</html>

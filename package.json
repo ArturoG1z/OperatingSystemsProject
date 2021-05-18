@@ -1,0 +1,23 @@
+{
+  "name": "osproject",
+  "version": "2.1.0",
+  "description": "Memory management project, paging simulation",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "Electron",
+    "OS",
+    "Memory",
+    "Management",
+    "Pagination",
+    "Simulation",
+    "LRU"
+  ],
+  "author": "Felipe Arturo Gonzalez Lopez",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^11.0.4"
+  }
+}
