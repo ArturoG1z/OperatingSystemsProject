@@ -29,4 +29,4 @@ READ 60395 ... ok
 READ 61418 ... ok
 READ 62441 ... ok
 READ 63464 ... ok
-WRITE 243993 ... page fault
+WRITE 33677 ... ok
